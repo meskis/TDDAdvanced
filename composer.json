@@ -1,0 +1,12 @@
+{
+    "name": "marcus/tdd-advanced",
+    "authors": [
+        {
+            "name": "Martynas Eskis",
+            "email": "eskis.martynas@gmail.com"
+        }
+    ],
+    "require": {
+        "phpspec/phpspec": "^3.0"
+    }
+}
