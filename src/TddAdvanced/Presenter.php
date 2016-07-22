@@ -15,6 +15,31 @@ class Presenter
     private $conference;
 
     /**
+     * @var string
+     */
+    private $name;
+
+    private function __construct()
+    {
+    }
+
+    public static function asGuest()
+    {
+        $presenter = new Presenter();
+
+        return $presenter;
+    }
+
+    public static function named($name)
+    {
+        $presenter = new Presenter();
+
+        $presenter->setName($name);
+
+        return $presenter;
+    }
+
+    /**
      * @param Conference $conference
      * @param TimeSlot   $timeSlot
      */
@@ -24,8 +49,18 @@ class Presenter
         $this->timeSlot   = $timeSlot;
     }
 
-    public function answerQuestion($argument1)
+    public function answerQuestion(Question $question)
     {
-        // TODO: write logic here
+        $question->answer('My answer');
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    private function setName($name)
+    {
+        $this->name = $name;
     }
 }

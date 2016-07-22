@@ -14,7 +14,7 @@ class TimeSlot
         return isset($this->presenter);
     }
 
-    public function reserveSlotFor($presenter)
+    public function reserveSlotFor(Presenter $presenter)
     {
         $this->presenter = $presenter;
     }
